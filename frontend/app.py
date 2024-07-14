@@ -42,7 +42,7 @@ if st.button("Check Authenticity"):
     if news_text:
         try:
             # Make a request to the backend
-            response = requests.post(BACKEND_URL, json={"text": news_text}, timeout=10)
+            response = requests.post(BACKEND_URL, json={"Headline": news_text}, timeout=10)
             
             if response.status_code == 200:
                 result = response.json()
