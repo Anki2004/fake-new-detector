@@ -80,3 +80,36 @@ if st.button("Check Authenticity"):
 
 st.markdown("---")
 st.write("Note: This is a simple model and may not be 100% accurate. Always verify news from reliable sources.")
+st.markdown("---")
+st.subheader("How it works")
+st.write("""
+This Fake News Detector uses a machine learning model to analyze the given text and predict whether it's likely to be real or fake news.
+
+1. You enter the news text (Headline of the news) in the text area above.
+2. When you click 'Check Authenticity', the text is sent to our backend server.
+3. The server processes the text using a pre-trained model.
+4. The model returns a prediction (Fake or Real) and a probability score.
+5. The results are displayed on this page.
+
+Please note that this is a simplified model and may not be 100% accurate. Always verify news from reliable sources.
+""")
+
+# Add a sidebar with additional information
+st.sidebar.title("About")
+st.sidebar.info("""
+This app is a demonstration of a simple fake news detection system.
+It uses natural language processing and machine learning techniques to analyze text content.
+
+Remember: No automated system is perfect. Always cross-check information from multiple reliable sources.
+""")
+
+# You can add more elements to the sidebar if needed
+st.sidebar.title("Tips for Spotting Fake News")
+st.sidebar.markdown("""
+- Check the source
+- Read beyond the headline
+- Check the author
+- Check the date
+- Check your biases
+- Consult fact-checking websites
+""")
