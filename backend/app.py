@@ -13,7 +13,7 @@ vectorizer = joblib.load(vectorizer_path)
 @app.route('/predict', methods = ['POST'])
 def predict():
     data = request.json
-    text = data['text']
+    text = data['Headline']
     text_vectorizer = vectorizer.transform([text])
     prediction = model.predict(text_vectorizer)[0]
     probability = model.predict_proba(text_vectorizer)[0][1]
